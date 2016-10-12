@@ -1,0 +1,107 @@
+
+// -----------------------------------------------------------------------------
+//           Testing Ground
+// -----------------------------------------------------------------------------
+
+@import "flex.less";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  .display(flex);
+  .flex-direction(column);
+  .justify-content(center);
+}
+
+#main {
+  .display(flex);
+  .flex(1);
+}
+#main > * {
+  border: 1px solid #ccc;
+  padding: 0.25em;
+}
+#main > article {
+  .flex(1, 0, 0px);
+  .order(2);
+
+  margin: 0 10px;
+  .display(flex);
+  .justify-content(center);
+  .align-items(center);
+
+  text-align: center;
+}
+nav {
+  .display(flex);
+  .justify-content(space-between);
+  background: gray;
+  margin-bottom: 10px;
+  .align-items(center);
+  .flex(none);
+}
+nav > a {
+  padding: 15px;
+  color: white;
+  display: block;
+  .flex(1);
+  margin: auto 10px;
+  text-decoration: none;
+  background: blue;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  min-width: 0; /* Apparently there's a spec change. Hack for now. */
+}
+nav > a:first-child {
+  margin-left: 0;
+}
+nav > a:last-child {
+  margin-right: 0;
+}
+nav > a:hover {
+  color: red;
+}
+#main > section {
+  .display(flex);
+  .flex-direction(row);
+  background: #eee;
+  width: 200px;
+  .order(1);
+  .flex(1, 0, 0px);
+}
+
+#main > section > div, #main > section > div > div {
+  border: 1px solid rgb(204, 204, 204);
+  .flex(1);
+  padding: 0.25em;
+  margin: 0.25em;
+  background: white;
+  .display(flex);
+  .justify-content(stretch);
+  .align-items(stretch);
+  text-align: center;
+
+  .flex-direction(column)
+}
+
+#main > section > div > div > .tabs {
+  .display(flex);
+  margin-bottom: 10px;
+  .align-items(center);
+  .flex(none);
+  background: gray;
+}
+
+#main > section > div > div > .content {
+    background: blue;
+    .flex(1);
+    .display(flex);
+}

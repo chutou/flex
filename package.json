@@ -1,0 +1,28 @@
+{
+  "name": "flex",
+  "version": "1.1.0",
+  "description": "Less mixins for flexbox layouts.",
+  "main": "./flex.less",
+  "scripts": {},
+  "author": "chutou <32173844@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-contrib-less": "~0.6.4",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.1"
+  },
+  "keywords": [
+    "flex",
+    "less",
+    "css",
+    "flexbox"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chutou/flex"
+  },
+  "bugs": {
+    "url": "https://github.com/chutou/flex/issues"
+  },
+  "homepage": "https://github.com/chutou/flex"
+}
