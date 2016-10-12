@@ -1,4 +1,4 @@
-# Flex.Less
+# Flex
 
 A [less] mixin for [flexbox].
 
